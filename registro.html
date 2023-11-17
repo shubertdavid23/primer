@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+</head>
+<body>
+
+    <h2>Formulario de Registro</h2>
+
+    <form action="procesar_registro.php" method="post">
+        <label for="tipo_usuario">Tipo de Usuario:</label>
+        <select id="tipo_usuario" name="tipo_usuario" required>
+            <option value="estudiante">Estudiante</option>
+            <option value="empresa">Empresa</option>
+        </select>
+        <br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+        <br>
+
+        <label for="cedula">Cédula de Identidad:</label>
+        <input type="text" id="cedula" name="cedula" required>
+        <br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" required>
+        <br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+        <br>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+        <br>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+        <br>
+
+        <div id="estudiante-fields" style="display: none;">
+            <label for="institucion">Institución:</label>
+            <input type="text" id="institucion" name="institucion">
+            <br>
+
+            <label for="anio_cursado">Año Cursado:</label>
+            <input type="text" id="anio_cursado" name="anio_cursado">
+            <br>
+
+            <label for="orientacion">Orientación:</label>
+            <input type="text" id="orientacion" name="orientacion">
+            <br>
+        </div>
+
+        <div id="empresa-fields" style="display: none;">
+            <label for="nombre_fantasia">Nombre Fantasía:</label>
+            <input type="text" id="nombre_fantasia" name="nombre_fantasia">
+            <br>
+
+            <label for="razon_social">Razón Social:</label>
+            <input type="text" id="razon_social" name="razon_social">
+            <br>
+
+            <label for="rut">RUT:</label>
+            <input type="text" id="rut" name="rut">
+            <br>
+
+            <label for="area_empresa">Área de la Empresa:</label>
+            <input type="text" id="area_empresa" name="area_empresa">
+            <br>
+
+            <label for="persona_contacto">Persona de Contacto:</label>
+            <input type="text" id="persona_contacto" name="persona_contacto">
+            <br>
+        </div>
+
+        <input type="submit" value="Registrar">
+    </form>
+
+    <script>
+        // Mostrar u ocultar campos específicos según el tipo de usuario seleccionado
+        document.getElementById("tipo_usuario").addEventListener("change", function() {
+            var estudianteFields = document.getElementById("estudiante-fields");
+            var empresaFields = document.getElementById("empresa-fields");
+
+            if (this.value === "estudiante") {
+                estudianteFields.style.display = "block";
+                empresaFields.style.display = "none";
+            } else if (this.value === "empresa") {
+                estudianteFields.style.display = "none";
+                empresaFields.style.display = "block";
+            } else {
+                estudianteFields.style.display = "none";
+                empresaFields.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>

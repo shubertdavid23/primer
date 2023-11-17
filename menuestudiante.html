@@ -1,0 +1,225 @@
+<?php
+session_start();
+
+// Verifica si el usuario no ha iniciado sesión
+if (!isset($_SESSION['usuario'])) {
+    // Redirige a la página de inicio de sesión
+    header("Location: index.html");
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="trabajo, paysandu, estudiantes, pasantias, bolsa de empleo">
+    <meta name="description" content="Primer Paso Laboral, plataforma que conecta estudiantes de bachillerato con pasantías y experiencias laborales para impulsar su inserción laboral">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="estiloestudiantemenu.css">
+    <title>Primer Paso Laboral</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="logo-primerpaso">
+        </div>
+        <div class="titulo">
+            <h1>ESTUDIANTES</h1>
+        </div>
+        <div class="botones-nav">
+            <a href="index.html" class="nav-boton">Inicio</a>
+            <a href="perfilestudiante.html" class="nav-boton">Mi Perfil</a>
+        </div>
+    </header>
+    
+
+
+    <div class="contenedor-noticias">
+    <div class="nuevo-content">
+    <div class="nuevo-item" id="nuevo1">
+            <h4>Finalistas</h4>
+            <p> Estudiantes de Maldonado son finalistas<br>
+                 de concurso organizado por la NASA</p>
+            <a href="https://www.gub.uy/presidencia/comunicacion/noticias/estudiantes-maldonado-son-finalistas-concurso-organizado-nasa">Leer Noticia</a>
+        </div>
+    </div>
+
+    <div class="nuevo-content">
+        <div class="nuevo-item" id="nuevo2">
+            <h4>Ganaron</h4>
+            <p> Estudiantes ganaron una "misión imposible"<br>
+                de robótica y fueron premiados en Alemania</p>
+            <a href="https://www.elobservador.com.uy/nota/estudiantes-de-utec-ganaron-una-mision-imposible-de-robotica-y-fueron-premiados-en-alemania-2023721164412">Leer Noticia</a>
+        </div>
+    </div>
+
+    <div class="nuevo-content">
+        <div class="nuevo-item" id="nuevo3">
+            <h4>Carpooling</h4>
+            <p> Son estudiantes uruguayos y crearon una exitosa app<br>
+             para ahorrar en viajes de larga distancia</p>
+            <a href="https://www.lanacion.com.ar/lifestyle/carpooling-son-estudiantes-uruguayos-y-crearon-una-exitosa-app-para-ahorrar-en-viajes-de-larga-nid11102022/">Leer Noticia</a>
+        </div>
+    </div>
+    <div class="nuevo-content">
+        <div class="nuevo-item" id="nuevo4">
+            <h4>Medalla de Oro</h4>
+            <p> Estudiantes uruguayos ganaron medallas de oro<br>
+                 y bronce en Olimpíada de Astronomía</p>
+            <a href="https://www.elpais.com.uy/vida-actual/estudiantes-uruguayos-ganaron-medallas-de-oro-y-bronce-en-olimpiada-de-astronomia">Leer Noticia</a>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="wrapper">
+        <div class="card">
+            <div class="poster"><img src="informatica.jpg" alt="informatica"></div>
+            <div class="details">
+                <h1>INFORMÁTICA</h1>
+                <h2>BACHILLERATO TECNOLÓGICO INFORMÁTICO</h2>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>I.T.S.P</span>
+                </div>
+                <div class="tags">
+                    <span class="tag">Desarrollo y soporte</span>
+                    <span class="tag">Desarrollo Web</span>
+                </div>
+                <p class="desc">
+                    Realizar soporte al equipamiento informático detectando y reparando fallas en el hardware y software. Asesorar e instalar hardware, software de aplicación.
+                </p>
+                <div class="boton">
+                    <a href="informatica.php" class="boton">Ingresar</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="poster"><img src="administracion.jpg" alt="administracion"></div>
+            <div class="details">
+                <h1>ADMINISTRACIÓN</h1>
+                <h2>EDUCACIÓN MEDIA TECNOLÓGICA</h2>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span class="tag">UTU</span>
+                </div>
+                <div class="tags">
+                    <span class="tag">Auxiliar Técnico en Administración</span>
+                </div>
+                <p class="desc">
+                    Desarrollar capacidades de gestión administrativa en todos sus aspectos (captación, manejo, trámite y seguimiento de la información pertinente).
+                </p>
+                <div class="boton">
+                    <a href="administracion.php" class="boton">Ingresar</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="poster"><img src="industrial.jpg" alt="automatizacionindustrial"></div>
+            <div class="details">
+                <h1>AUTOMATIZACIÓN INDUSTRIAL</h1>
+                <h2>AUXILIAR TÉCNICO EN AUTOMATIZACIÓN INDUSTRIAL</h2>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>I.A.E</span>
+                </div>
+                <div class="tags">
+                    <span class="tag yellow">TECNOLÓGICA AUTOMATIZACIÓN INDUSTRIAL</span>
+                </div>
+                <p class="desc">
+                    Participar en proyectos de sistemas de automatismo y control interviniendo en aspectos creativos y tecnológicos específicos en la concepción del sistema industrial.
+                </p>
+                <div class="boton">
+                    <a href="industrial.php" class="boton">Ingresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <aside>
+
+        <div class="icon-box">
+            <i class="fas fa-book icon"></i>
+            <div class="titulo"> 12 Tecnicas de Estudio</div>
+            <div class="parafo">Aprende cuales son las tecnicas de estudio para mejorar tu aprendizaje</div>
+            <a href="https://www.uo.edu.mx/blog/12-t%C3%A9cnicas-de-estudio-para-potenciar-tu-aprendizaje" class="button">Ver Articulo</a>
+
+        </div>
+        <div class="icon-box">
+            <i class="fas fa-book icon"></i>
+            <div class="titulo">Estudiar, Concentrarse y Memorizar</div>
+            <div class="parafo">Claves para estudiar mejor, trucos para concentrarse estudiando y concejos para memorizar.</div>
+            <a href="https://www.uax.com/blog/tips-para-estudiar-concentrarse-y-memorizar-mejor" class="button">Ver Articulo</a>
+
+        </div>
+        
+        <div class="icon-box">
+            <i class="fas fa-book icon"></i>
+            <div class="titulo">Tu primer Curriculum Vitae</div>
+            <div class="parafo">Como hacer tu Curriculum Vitae. Once elementos a considerar</div>
+            <a href="https://www.latinhumancapital.com/como-hacer-tu-primer-curriculum-vitae-cv-once-elementos-a-considerar/" class="button">Ver Articulo</a>
+        </div>
+
+        <div class="icon-box">
+            <i class="fas fa-book icon"></i>
+            <div class="titulo">Carta</div>
+            <div class="parafo">Carta de postulacion supone la puerta de entrada. te contamos todos los secretos para redactarla correctamente</div>
+            <a href="https://www.universia.net/uy/actualidad/empleo/como-redactar-una-carta-de-postulacion-para-un-empleo.html" class="button">Ver Articulo</a>
+        </div>
+        
+        <div class="icon-box">
+            <i class="fab fa-youtube icon"></i>
+            <div class="titulo">Lenguaje Corporal</div>
+            <div class="parafo">Todo lo que debes de saber sobre lenguaje corporal al momento de tener tu entrevista de trabajo</div>
+            <a href="https://www.youtube.com/watch?v=4mizN9aNzU0" class="button">Ir a Youtube</a>
+
+        </div>
+        <div class="icon-box">
+            <i class="fab fa-youtube icon"></i>
+            <div class="titulo">Preguntas y Respuestas en una Entrevistas</div>
+            <div class="parafo">una entrevista  enfrentamos a una serie de preguntas para las que muchas veces no tenemos respuesta. En este vídeo te voy a descubrir las 10 primeras preguntas (de un total de 20) que tendrás que responder para conseguir un empleo, evitando las temidas preguntas trampa.</div>
+            <a href="https://www.youtube.com/watch?v=YnsaWbHyiHE&t=5s" class="button">Ir a Youtube</a>
+
+        </div>
+        
+        <div class="icon-box">
+            <i class="fab fa-youtube icon"></i>
+            <div class="titulo">Entrevista de Trabajo</div>
+            <div class="parafo">En este vídeo te vamos a dar todos los tips necesarios , vamos a ver como puedes lograr ese trabajo sin experiencia y decirte: ¡Consigue tu trabajo!</div>
+            <a href="https://www.youtube.com/watch?v=jWktliTZtaI" class="button">Ir a Youtube</a>
+        </div>
+
+        <div class="icon-box">
+            <i class="fab fa-youtube icon"></i>
+            <div class="titulo">Tu primer dia de trabajo</div>
+            <div class="parafo">10 Consejos para tu primer dia de trabajo. Tips</div>
+            <a href="https://www.youtube.com/watch?v=hT9yotfE4J4" class="button">Ir a Youtube</a>
+        </div>
+        
+        
+
+
+      </aside>
+   
+    <footer>
+        <div class="redes-sociales">
+            <a href="https://web.facebook.com/UTUoficial/?locale=es_LA&_rdc=1&_rdr">Utu en Facebook</a>
+            <a href="https://www.instagram.com/utuoficial/">Utu en Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
