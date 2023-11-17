@@ -12,7 +12,7 @@ function obtenerEmpresaId() {
     }
 }
 
-// Recuperar datos del formulario
+// Recuperar datos del formulari
 $titulo = $_POST['titulo'];
 $duracion = $_POST['duracion'];
 $tareas = $_POST['tareas'];
